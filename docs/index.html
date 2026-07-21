@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Gap — MLB prediction market screener</title>
+<meta name="description" content="Kalshi vs. Polymarket vs. sportsbook consensus, side by side, for every MLB game in the window.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230F1A16'/%3E%3Cpath d='M50 15 L85 50 L50 85 L15 50 Z' fill='none' stroke='%23FFB343' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F1A16;
+    --bg-raised: #16241F;
+    --rule: #263A31;
+    --ivory: #EDE8DD;
+    --ivory-dim: #A8B3AC;
+    --amber: #FFB343;
+    --green: #5FD9A4;
+    --red: #D2574B;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ivory);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--amber); }
+  a:hover { color: var(--green); }
+
+  :focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+  }
+
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  header.top {
+    margin-bottom: 32px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ivory-dim);
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(32px, 6vw, 48px);
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    color: var(--ivory);
+  }
+
+  h1 .gap { color: var(--amber); }
+
+  .lede {
+    max-width: 60ch;
+    color: var(--ivory-dim);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .lede strong { color: var(--ivory); font-weight: 600; }
+
+  /* --- Scoreboard tally strip: the signature element --- */
+  .tally {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 28px 0 8px;
+  }
+
+  .tally-box {
+    background: var(--bg-raised);
+    padding: 18px 16px;
+    text-align: center;
+  }
+
+  .tally-num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(28px, 5vw, 40px);
+    color: var(--amber);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .tally-num {
+      animation: bulb-warm 0.6s ease-out;
+    }
+  }
+  @keyframes bulb-warm {
+    0% { opacity: 0.15; }
+    40% { opacity: 1; }
+    55% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+
+  .tally-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ivory-dim);
+    margin-top: 4px;
+  }
+
+  .meta-line {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ivory-dim);
+    margin: 0 0 36px;
+  }
+
+  /* --- Table --- */
+  .table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    min-width: 640px;
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--bg-raised);
+    text-align: left;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ivory-dim);
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+
+  tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: rgba(255, 179, 67, 0.05); }
+
+  .matchup { font-family: var(--font-mono); font-weight: 500; }
+  .team-code { border-bottom: 1px dotted var(--ivory-dim); cursor: help; }
+
+  .num { text-align: right; }
+  .dash { color: var(--ivory-dim); }
+
+  .edge-pos { color: var(--green); }
+  .edge-neg { color: var(--red); }
+
+  .arb-flag {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    background: rgba(95, 217, 164, 0.15);
+    color: var(--green);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    font-family: var(--font-body);
+    font-weight: 600;
+  }
+
+  /* --- Signals section --- */
+  .signals {
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 4px;
+    color: var(--ivory);
+  }
+
+  .signals-note {
+    font-size: 13px;
+    color: var(--ivory-dim);
+    margin: 0 0 16px;
+  }
+
+  .signal-row {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14px;
+  }
+  .signal-row:last-child { border-bottom: none; }
+
+  .signal-row .tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ivory-dim);
+    flex-shrink: 0;
+    padding-top: 2px;
+    white-space: nowrap;
+  }
+
+  /* --- Arb callout --- */
+  .arb-box {
+    margin: 40px 0;
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    padding: 18px 20px;
+    background: rgba(95, 217, 164, 0.06);
+  }
+  .arb-box h2 { color: var(--green); }
+  .arb-legs {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    margin: 10px 0 0;
+    color: var(--ivory);
+  }
+  .arb-legs div { margin: 4px 0; }
+  .arb-note {
+    font-size: 12px;
+    color: var(--ivory-dim);
+    margin-top: 10px;
+  }
+
+  /* --- Empty / loading state --- */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    border: 1px dashed var(--rule);
+    border-radius: 6px;
+    color: var(--ivory-dim);
+  }
+  .empty-state .big {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--ivory);
+    margin-bottom: 8px;
+  }
+
+  /* --- Footer --- */
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--ivory-dim);
+  }
+  footer p { margin: 0 0 10px; max-width: 68ch; }
+  footer .links a { margin-right: 16px; color: var(--ivory-dim); text-decoration: none; }
+  footer .links a:hover { color: var(--amber); }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 28px 16px 60px; }
+    .tally-box { padding: 14px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <p class="eyebrow">Kalshi · Polymarket · Sportsbook consensus — MLB</p>
+    <h1>Market<span class="gap"> Gap</span></h1>
+    <p class="lede">Every MLB game in the next few days, priced by three different markets at once. When they disagree, <strong>that's the signal</strong> — not advice, just the gap worth checking yourself.</p>
+  </header>
+
+  <div class="tally" id="tally">
+    <div class="tally-box">
+      <div class="tally-num" id="tally-games">–</div>
+      <div class="tally-label">Games tracked</div>
+    </div>
+    <div class="tally-box">
+      <div class="tally-num" id="tally-signals">–</div>
+      <div class="tally-label">Value signals</div>
+    </div>
+    <div class="tally-box">
+      <div class="tally-num" id="tally-arbs">–</div>
+      <div class="tally-label">Credible arbs</div>
+    </div>
+  </div>
+  <p class="meta-line" id="meta-line">Loading latest snapshot…</p>
+
+  <div id="content"></div>
+
+  <footer>
+    <p id="disclaimer">Screener output, not financial advice. Prices move — always verify live quotes, fees, liquidity, and resolution rules on both venues before trading.</p>
+    <div class="links">
+      <a href="https://kalshi.com" target="_blank" rel="noopener">Trade on Kalshi</a>
+      <a href="https://polymarket.com" target="_blank" rel="noopener">Trade on Polymarket</a>
+      <a href="https://github.com/henrystanton00" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+const TEAM_NAMES = {
+  ARI: "Diamondbacks", ATL: "Braves", BAL: "Orioles", BOS: "Red Sox",
+  CHC: "Cubs", CWS: "White Sox", CIN: "Reds", CLE: "Guardians",
+  COL: "Rockies", DET: "Tigers", HOU: "Astros", KC: "Royals",
+  LAA: "Angels", LAD: "Dodgers", MIA: "Marlins", MIL: "Brewers",
+  MIN: "Twins", NYM: "Mets", NYY: "Yankees", ATH: "Athletics",
+  PHI: "Phillies", PIT: "Pirates", SD: "Padres", SFG: "Giants",
+  SEA: "Mariners", STL: "Cardinals", TB: "Rays", TEX: "Rangers",
+  TOR: "Blue Jays", WSH: "Nationals",
+};
+
+function teamSpan(code) {
+  const name = TEAM_NAMES[code] || code;
+  return `<span class="team-code" title="${name}">${code}</span>`;
+}
+
+function fmtPrice(v) {
+  return v === null || v === undefined ? '<span class="dash">—</span>' : v.toFixed(2);
+}
+
+function fmtDate(iso) {
+  const d = new Date(iso + 'T12:00:00Z');
+  return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
+}
+
+function edgeClass(v) {
+  if (v === null || v === undefined) return '';
+  return v > 0 ? 'edge-pos' : (v < 0 ? 'edge-neg' : '');
+}
+
+function bestEdge(row) {
+  const k = row.kalshi_edge_vs_books, p = row.polymarket_edge_vs_books;
+  const candidates = [k, p].filter(v => v !== null && v !== undefined);
+  if (!candidates.length) return null;
+  return candidates.reduce((a, b) => Math.abs(b) > Math.abs(a) ? b : a);
+}
+
+function renderTable(games) {
+  if (!games.length) {
+    return `<div class="empty-state">
+      <div class="big">No games in the window right now</div>
+      <p>The screener refreshes automatically on a schedule. Check back soon, or see the timestamp above for the last run.</p>
+    </div>`;
+  }
+  const rows = games.map(g => {
+    const edge = bestEdge(g);
+    const edgePct = edge !== null ? `${edge > 0 ? '+' : ''}${(edge * 100).toFixed(1)}%` : '<span class="dash">—</span>';
+    const arbFlag = g.arb && !g.arb.suspect ? '<span class="arb-flag">ARB</span>' : '';
+    return `<tr>
+      <td class="matchup">${teamSpan(g.opponent)} @ ${teamSpan(g.team)}${arbFlag}</td>
+      <td>${fmtDate(g.date)}</td>
+      <td class="num">${fmtPrice(g.kalshi ? g.kalshi.yes_ask : null)}</td>
+      <td class="num">${fmtPrice(g.polymarket ? g.polymarket.yes_ask : null)}</td>
+      <td class="num">${fmtPrice(g.book_consensus)}</td>
+      <td class="num ${edgeClass(edge)}">${edgePct}</td>
+    </tr>`;
+  }).join('');
+  return `<div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Away @ Home</th>
+          <th>Date</th>
+          <th>Kalshi</th>
+          <th>Polymarket</th>
+          <th>Books</th>
+          <th>Edge</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>
+  <p class="signals-note" style="margin-top:10px;">All prices are the HOME team's win probability. Edge = biggest gap vs. de-vigged sportsbook consensus.</p>`;
+}
+
+function renderSignals(games) {
+  const withSignal = games.filter(g => g.signal).slice(0, 6);
+  if (!withSignal.length) return '';
+  const rows = withSignal.map(g =>
+    `<div class="signal-row"><span class="tag">${g.opponent} @ ${g.team} · ${fmtDate(g.date)}</span><span>${g.signal}</span></div>`
+  ).join('');
+  return `<div class="signals">
+    <h2>Top signals</h2>
+    <p class="signals-note">Vs. de-vigged sportsbook consensus. Not advice — verify before acting.</p>
+    ${rows}
+  </div>`;
+}
+
+function renderArbs(arbs) {
+  const credible = (arbs || []).filter(a => !a.suspect);
+  if (!credible.length) return '';
+  const a = credible[0];
+  return `<div class="arb-box">
+    <h2>Credible arb found</h2>
+    <p style="margin:6px 0 0; font-size:13px;">${a.team} vs ${a.opponent} — ${(a.profit_per_dollar * 100).toFixed(1)}% locked in, net of fees.</p>
+    <div class="arb-legs">
+      <div>1. ${a.leg_1}</div>
+      <div>2. ${a.leg_2}</div>
+    </div>
+    <p class="arb-note">Total cost $${a.total_cost.toFixed(2)} per $1 payout. ${a.note}</p>
+  </div>`;
+}
+
+async function load() {
+  try {
+    const res = await fetch('./snapshot.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('snapshot.json not found');
+    const data = await res.json();
+
+    const games = data.games || [];
+    const signalCount = games.filter(g => g.signal).length;
+    const credibleArbs = (data.arbs || []).filter(a => !a.suspect);
+
+    document.getElementById('tally-games').textContent = games.length;
+    document.getElementById('tally-signals').textContent = signalCount;
+    document.getElementById('tally-arbs').textContent = credibleArbs.length;
+
+    const generated = new Date(data.generated_at);
+    const suspectNote = (data.suspect && data.suspect.length)
+      ? ` · ${data.suspect.length} row(s) hidden for data-quality checks`
+      : '';
+    document.getElementById('meta-line').textContent =
+      `Last updated ${generated.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })}${suspectNote}`;
+
+    if (data.disclaimer) {
+      document.getElementById('disclaimer').textContent = data.disclaimer;
+    }
+
+    const content = document.getElementById('content');
+    content.innerHTML = renderArbs(data.arbs) + renderTable(games) + renderSignals(games);
+
+  } catch (err) {
+    document.getElementById('meta-line').textContent = 'Could not load the latest snapshot.';
+    document.getElementById('content').innerHTML = `<div class="empty-state">
+      <div class="big">First snapshot hasn't landed yet</div>
+      <p>This page reads a data file the screener writes automatically. Once the first scheduled run completes, games will appear here.</p>
+    </div>`;
+  }
+}
+
+load();
+</script>
+</body>
+</html>
