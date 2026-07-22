@@ -1,58 +1,65 @@
 {
-  "generated_at": "2026-07-22T03:57:31.822490+00:00",
+  "generated_at": "2026-07-22T06:37:49.344752+00:00",
   "leagues": [
     "MLB"
   ],
   "orientation_note": "All probabilities are for the HOME team when home is known (SGO home/away field, else Kalshi ticker convention), across every venue.",
   "games": [
     {
-      "game_key": "MLB:MIL|NYM:2026-07-22",
+      "game_key": "MLB:NYY|PIT:2026-07-22",
       "league": "MLB",
       "date": "2026-07-22",
-      "team": "MIL",
-      "opponent": "NYM",
-      "home_team": "MIL",
+      "team": "NYY",
+      "opponent": "PIT",
+      "home_team": "NYY",
       "orientation": "home",
       "kalshi": {
-        "yes_bid": 0.58,
-        "yes_ask": 0.59,
+        "yes_bid": 0.61,
+        "yes_ask": 0.62,
         "fee_at_ask": 0.02,
-        "volume_24h": 106472.94,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221410NYMMIL"
+        "volume_24h": 73176.58,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221335PITNYY"
       },
       "polymarket": {
-        "yes_bid": 0.57,
-        "yes_ask": 0.58,
-        "fee_at_ask": 0.021,
-        "volume_24h": 237.019992,
-        "url": "https://polymarket.com/event/mlb-nym-mil-2026-07-22"
+        "yes_bid": 0.61,
+        "yes_ask": 0.62,
+        "fee_at_ask": 0.019,
+        "volume_24h": 46258.74210499999,
+        "url": "https://polymarket.com/event/mlb-pit-nyy-2026-07-22"
       },
-      "book_consensus": 0.5639,
+      "book_consensus": 0.6005,
       "book_count": 9,
-      "kalshi_edge_vs_books": 0.0211,
-      "polymarket_edge_vs_books": 0.0111,
-      "signal": "MIL priced 2.1 pts ABOVE book consensus on kalshi -> value side: 'NYM wins' (i.e. NO MIL) on kalshi"
+      "kalshi_edge_vs_books": 0.0145,
+      "polymarket_edge_vs_books": 0.0145,
+      "signal": "NYY priced 1.5 pts ABOVE book consensus on kalshi -> value side: 'PIT wins' (i.e. NO NYY) on kalshi"
     },
     {
-      "game_key": "MLB:ARI|STL:2026-07-23",
+      "game_key": "MLB:KC|SFG:2026-07-22",
       "league": "MLB",
-      "date": "2026-07-23",
-      "team": "STL",
-      "opponent": "ARI",
-      "home_team": "STL",
+      "date": "2026-07-22",
+      "team": "KC",
+      "opponent": "SFG",
+      "home_team": "KC",
       "orientation": "home",
-      "kalshi": null,
-      "polymarket": {
-        "yes_bid": 0.55,
-        "yes_ask": 0.59,
-        "fee_at_ask": 0.0205,
-        "volume_24h": 1480.409463,
-        "url": "https://polymarket.com/event/mlb-ari-stl-2026-06-25"
+      "kalshi": {
+        "yes_bid": 0.46,
+        "yes_ask": 0.47,
+        "fee_at_ask": 0.02,
+        "volume_24h": 41769.28,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221410SFKC"
       },
-      "book_consensus": 0.5521,
-      "book_count": 6,
-      "polymarket_edge_vs_books": 0.0179,
-      "signal": "STL priced 1.8 pts ABOVE book consensus on polymarket -> value side: 'ARI wins' (i.e. NO STL) on polymarket"
+      "polymarket": {
+        "yes_bid": 0.46,
+        "yes_ask": 0.47,
+        "fee_at_ask": 0.0235,
+        "volume_24h": 15576.361907000019,
+        "url": "https://polymarket.com/event/mlb-sf-kc-2026-07-22"
+      },
+      "book_consensus": 0.479,
+      "book_count": 9,
+      "kalshi_edge_vs_books": -0.014,
+      "polymarket_edge_vs_books": -0.014,
+      "signal": "KC priced 1.4 pts BELOW book consensus on kalshi -> value side: 'KC wins' (YES) on kalshi"
     },
     {
       "game_key": "MLB:ATL|SD:2026-07-22",
@@ -66,98 +73,21 @@
         "yes_bid": 0.53,
         "yes_ask": 0.54,
         "fee_at_ask": 0.02,
-        "volume_24h": 6350.94,
+        "volume_24h": 9726.93,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221915SDATL"
       },
       "polymarket": {
-        "yes_bid": 0.53,
-        "yes_ask": 0.54,
-        "fee_at_ask": 0.023,
-        "volume_24h": 316.146078,
-        "url": "https://polymarket.com/event/mlb-sd-atl-2026-07-22"
-      },
-      "book_consensus": 0.5219,
-      "book_count": 9,
-      "kalshi_edge_vs_books": 0.0131,
-      "polymarket_edge_vs_books": 0.0131,
-      "signal": "ATL priced 1.3 pts ABOVE book consensus on kalshi -> value side: 'SD wins' (i.e. NO ATL) on kalshi"
-    },
-    {
-      "game_key": "MLB:CIN|SEA:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "SEA",
-      "opponent": "CIN",
-      "home_team": "SEA",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.58,
-        "yes_ask": 0.59,
-        "fee_at_ask": 0.02,
-        "volume_24h": 14905.54,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221540CINSEA"
-      },
-      "polymarket": {
-        "yes_bid": 0.57,
-        "yes_ask": 0.58,
-        "fee_at_ask": 0.021,
-        "volume_24h": 7183.549143,
-        "url": "https://polymarket.com/event/mlb-cin-sea-2026-07-22"
-      },
-      "book_consensus": 0.5851,
-      "book_count": 9,
-      "kalshi_edge_vs_books": -0.0001,
-      "polymarket_edge_vs_books": -0.0101,
-      "signal": "SEA priced 1.0 pts BELOW book consensus on polymarket -> value side: 'SEA wins' (YES) on polymarket"
-    },
-    {
-      "game_key": "MLB:HOU|MIA:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "HOU",
-      "opponent": "MIA",
-      "home_team": "HOU",
-      "orientation": "home",
-      "kalshi": {
         "yes_bid": 0.52,
         "yes_ask": 0.53,
-        "fee_at_ask": 0.02,
-        "volume_24h": 6043.26,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL222010MIAHOU"
+        "fee_at_ask": 0.0235,
+        "volume_24h": 741.146078,
+        "url": "https://polymarket.com/event/mlb-sd-atl-2026-07-22"
       },
-      "polymarket": {
-        "yes_bid": 0.51,
-        "yes_ask": 0.52,
-        "fee_at_ask": 0.024,
-        "volume_24h": 330.697006,
-        "url": "https://polymarket.com/event/mlb-mia-hou-2026-07-22"
-      },
-      "book_consensus": 0.5245,
+      "book_consensus": 0.5214,
       "book_count": 9,
-      "kalshi_edge_vs_books": 0.0005,
-      "polymarket_edge_vs_books": -0.0095,
-      "signal": "HOU priced 0.9 pts BELOW book consensus on polymarket -> value side: 'HOU wins' (YES) on polymarket"
-    },
-    {
-      "game_key": "MLB:TB|TOR:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "TOR",
-      "opponent": "TB",
-      "home_team": "TOR",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.49,
-        "yes_ask": 0.5,
-        "fee_at_ask": 0.02,
-        "volume_24h": 3990.3,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221907TBTOR"
-      },
-      "polymarket": null,
-      "book_consensus": 0.5037,
-      "book_count": 8,
-      "kalshi_edge_vs_books": -0.0087,
-      "signal": "TOR priced 0.9 pts BELOW book consensus on kalshi -> value side: 'TOR wins' (YES) on kalshi"
+      "kalshi_edge_vs_books": 0.0136,
+      "polymarket_edge_vs_books": 0.0036,
+      "signal": "ATL priced 1.4 pts ABOVE book consensus on kalshi -> value side: 'SD wins' (i.e. NO ATL) on kalshi"
     },
     {
       "game_key": "MLB:CHC|DET:2026-07-22",
@@ -168,192 +98,24 @@
       "home_team": "CHC",
       "orientation": "home",
       "kalshi": {
-        "yes_bid": 0.51,
-        "yes_ask": 0.52,
+        "yes_bid": 0.52,
+        "yes_ask": 0.53,
         "fee_at_ask": 0.02,
-        "volume_24h": 2987.71,
+        "volume_24h": 13534.82,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL222010DETCHC"
       },
       "polymarket": {
         "yes_bid": 0.52,
         "yes_ask": 0.53,
         "fee_at_ask": 0.0235,
-        "volume_24h": 70.849622,
+        "volume_24h": 3165.99643,
         "url": "https://polymarket.com/event/mlb-det-chc-2026-07-22"
       },
-      "book_consensus": 0.5165,
+      "book_consensus": 0.5115,
       "book_count": 9,
-      "kalshi_edge_vs_books": -0.0015,
-      "polymarket_edge_vs_books": 0.0085,
-      "signal": "CHC priced 0.9 pts ABOVE book consensus on polymarket -> value side: 'DET wins' (i.e. NO CHC) on polymarket"
-    },
-    {
-      "game_key": "MLB:BAL|BOS:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "BOS",
-      "opponent": "BAL",
-      "home_team": "BOS",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.56,
-        "yes_ask": 0.57,
-        "fee_at_ask": 0.02,
-        "volume_24h": 4356.79,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221910BALBOS"
-      },
-      "polymarket": {
-        "yes_bid": 0.57,
-        "yes_ask": 0.58,
-        "fee_at_ask": 0.021,
-        "volume_24h": 877.411191,
-        "url": "https://polymarket.com/event/mlb-bal-bos-2026-07-22"
-      },
-      "book_consensus": 0.5718,
-      "book_count": 8,
-      "kalshi_edge_vs_books": -0.0068,
-      "polymarket_edge_vs_books": 0.0032,
-      "signal": "BOS priced 0.7 pts BELOW book consensus on kalshi -> value side: 'BOS wins' (YES) on kalshi"
-    },
-    {
-      "game_key": "MLB:ARI|ATH:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "ARI",
-      "opponent": "ATH",
-      "home_team": "ARI",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.52,
-        "yes_ask": 0.53,
-        "fee_at_ask": 0.02,
-        "volume_24h": 3371.85,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221540ATHAZ"
-      },
-      "polymarket": {
-        "yes_bid": 0.52,
-        "yes_ask": 0.53,
-        "fee_at_ask": 0.0235,
-        "volume_24h": 631.876912,
-        "url": "https://polymarket.com/event/mlb-oak-ari-2026-07-22"
-      },
-      "book_consensus": 0.5183,
-      "book_count": 9,
-      "kalshi_edge_vs_books": 0.0067,
-      "polymarket_edge_vs_books": 0.0067,
-      "signal": "ARI priced 0.7 pts ABOVE book consensus on kalshi -> value side: 'ATH wins' (i.e. NO ARI) on kalshi"
-    },
-    {
-      "game_key": "MLB:NYY|PIT:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "NYY",
-      "opponent": "PIT",
-      "home_team": "NYY",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.59,
-        "yes_ask": 0.6,
-        "fee_at_ask": 0.02,
-        "volume_24h": 27092.13,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221335PITNYY"
-      },
-      "polymarket": {
-        "yes_bid": 0.58,
-        "yes_ask": 0.59,
-        "fee_at_ask": 0.0205,
-        "volume_24h": 6927.679059,
-        "url": "https://polymarket.com/event/mlb-pit-nyy-2026-07-22"
-      },
-      "book_consensus": 0.5892,
-      "book_count": 9,
-      "kalshi_edge_vs_books": 0.0058,
-      "polymarket_edge_vs_books": -0.0042,
-      "signal": "NYY priced 0.6 pts ABOVE book consensus on kalshi -> value side: 'PIT wins' (i.e. NO NYY) on kalshi"
-    },
-    {
-      "game_key": "MLB:LAD|PHI:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "PHI",
-      "opponent": "LAD",
-      "home_team": "PHI",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.47,
-        "yes_ask": 0.48,
-        "fee_at_ask": 0.02,
-        "volume_24h": 16304.81,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221840LADPHI"
-      },
-      "polymarket": {
-        "yes_bid": 0.48,
-        "yes_ask": 0.49,
-        "fee_at_ask": 0.0245,
-        "volume_24h": 791.586285,
-        "url": "https://polymarket.com/event/mlb-lad-phi-2026-07-22"
-      },
-      "book_consensus": 0.4805,
-      "book_count": 9,
-      "kalshi_edge_vs_books": -0.0055,
-      "polymarket_edge_vs_books": 0.0045,
-      "signal": "PHI priced 0.5 pts BELOW book consensus on kalshi -> value side: 'PHI wins' (YES) on kalshi"
-    },
-    {
-      "game_key": "MLB:COL|WSH:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "COL",
-      "opponent": "WSH",
-      "home_team": "COL",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.44,
-        "yes_ask": 0.45,
-        "fee_at_ask": 0.02,
-        "volume_24h": 12086.48,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221510WSHCOL"
-      },
-      "polymarket": {
-        "yes_bid": 0.45,
-        "yes_ask": 0.46,
-        "fee_at_ask": 0.023,
-        "volume_24h": 7309.794172,
-        "url": "https://polymarket.com/event/mlb-wsh-col-2026-07-22"
-      },
-      "book_consensus": 0.4502,
-      "book_count": 9,
-      "kalshi_edge_vs_books": -0.0052,
-      "polymarket_edge_vs_books": 0.0048,
-      "signal": "COL priced 0.5 pts BELOW book consensus on kalshi -> value side: 'COL wins' (YES) on kalshi"
-    },
-    {
-      "game_key": "MLB:KC|SFG:2026-07-22",
-      "league": "MLB",
-      "date": "2026-07-22",
-      "team": "KC",
-      "opponent": "SFG",
-      "home_team": "KC",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.48,
-        "yes_ask": 0.49,
-        "fee_at_ask": 0.02,
-        "volume_24h": 5454.64,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221410SFKC"
-      },
-      "polymarket": {
-        "yes_bid": 0.48,
-        "yes_ask": 0.49,
-        "fee_at_ask": 0.0245,
-        "volume_24h": 80.35104700000001,
-        "url": "https://polymarket.com/event/mlb-sf-kc-2026-07-22"
-      },
-      "book_consensus": 0.4804,
-      "book_count": 9,
-      "kalshi_edge_vs_books": 0.0046,
-      "polymarket_edge_vs_books": 0.0046,
-      "signal": "KC priced 0.5 pts ABOVE book consensus on kalshi -> value side: 'SFG wins' (i.e. NO KC) on kalshi"
+      "kalshi_edge_vs_books": 0.0135,
+      "polymarket_edge_vs_books": 0.0135,
+      "signal": "CHC priced 1.4 pts ABOVE book consensus on kalshi -> value side: 'DET wins' (i.e. NO CHC) on kalshi"
     },
     {
       "game_key": "MLB:CWS|TEX:2026-07-22",
@@ -367,21 +129,182 @@
         "yes_bid": 0.5,
         "yes_ask": 0.51,
         "fee_at_ask": 0.02,
-        "volume_24h": 2797.86,
+        "volume_24h": 8085.81,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL222005CWSTEX"
       },
       "polymarket": {
-        "yes_bid": 0.5,
-        "yes_ask": 0.51,
-        "fee_at_ask": 0.0245,
-        "volume_24h": 90.70615,
+        "yes_bid": 0.49,
+        "yes_ask": 0.5,
+        "fee_at_ask": 0.025,
+        "volume_24h": 283.686541,
         "url": "https://polymarket.com/event/mlb-cws-tex-2026-07-22"
       },
-      "book_consensus": 0.5087,
+      "book_consensus": 0.5069,
       "book_count": 9,
-      "kalshi_edge_vs_books": -0.0037,
-      "polymarket_edge_vs_books": -0.0037,
-      "signal": "TEX priced 0.4 pts BELOW book consensus on kalshi -> value side: 'TEX wins' (YES) on kalshi"
+      "kalshi_edge_vs_books": -0.0019,
+      "polymarket_edge_vs_books": -0.0119,
+      "signal": "TEX priced 1.2 pts BELOW book consensus on polymarket -> value side: 'TEX wins' (YES) on polymarket"
+    },
+    {
+      "game_key": "MLB:TB|TOR:2026-07-22",
+      "league": "MLB",
+      "date": "2026-07-22",
+      "team": "TOR",
+      "opponent": "TB",
+      "home_team": "TOR",
+      "orientation": "home",
+      "kalshi": {
+        "yes_bid": 0.49,
+        "yes_ask": 0.5,
+        "fee_at_ask": 0.02,
+        "volume_24h": 22118.91,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221907TBTOR"
+      },
+      "polymarket": {
+        "yes_bid": 0.51,
+        "yes_ask": 0.52,
+        "fee_at_ask": 0.024,
+        "volume_24h": 1178.20163,
+        "url": "https://polymarket.com/event/mlb-tb-tor-2026-07-22"
+      },
+      "book_consensus": 0.5033,
+      "book_count": 9,
+      "kalshi_edge_vs_books": -0.0083,
+      "polymarket_edge_vs_books": 0.0117,
+      "signal": "TOR priced 1.2 pts ABOVE book consensus on polymarket -> value side: 'TB wins' (i.e. NO TOR) on polymarket"
+    },
+    {
+      "game_key": "MLB:MIL|NYM:2026-07-22",
+      "league": "MLB",
+      "date": "2026-07-22",
+      "team": "MIL",
+      "opponent": "NYM",
+      "home_team": "MIL",
+      "orientation": "home",
+      "kalshi": {
+        "yes_bid": 0.57,
+        "yes_ask": 0.58,
+        "fee_at_ask": 0.02,
+        "volume_24h": 146063.29,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221410NYMMIL"
+      },
+      "polymarket": {
+        "yes_bid": 0.57,
+        "yes_ask": 0.58,
+        "fee_at_ask": 0.021,
+        "volume_24h": 475.989992,
+        "url": "https://polymarket.com/event/mlb-nym-mil-2026-07-22"
+      },
+      "book_consensus": 0.5651,
+      "book_count": 9,
+      "kalshi_edge_vs_books": 0.0099,
+      "polymarket_edge_vs_books": 0.0099,
+      "signal": "MIL priced 1.0 pts ABOVE book consensus on kalshi -> value side: 'NYM wins' (i.e. NO MIL) on kalshi"
+    },
+    {
+      "game_key": "MLB:BAL|BOS:2026-07-22",
+      "league": "MLB",
+      "date": "2026-07-22",
+      "team": "BOS",
+      "opponent": "BAL",
+      "home_team": "BOS",
+      "orientation": "home",
+      "kalshi": {
+        "yes_bid": 0.56,
+        "yes_ask": 0.57,
+        "fee_at_ask": 0.02,
+        "volume_24h": 19746.37,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221910BALBOS"
+      },
+      "polymarket": {
+        "yes_bid": 0.57,
+        "yes_ask": 0.58,
+        "fee_at_ask": 0.021,
+        "volume_24h": 1092.2779340000002,
+        "url": "https://polymarket.com/event/mlb-bal-bos-2026-07-22"
+      },
+      "book_consensus": 0.5721,
+      "book_count": 8,
+      "kalshi_edge_vs_books": -0.0071,
+      "polymarket_edge_vs_books": 0.0029,
+      "signal": "BOS priced 0.7 pts BELOW book consensus on kalshi -> value side: 'BOS wins' (YES) on kalshi"
+    },
+    {
+      "game_key": "MLB:ARI|STL:2026-07-23",
+      "league": "MLB",
+      "date": "2026-07-23",
+      "team": "STL",
+      "opponent": "ARI",
+      "home_team": "STL",
+      "orientation": "home",
+      "kalshi": null,
+      "polymarket": {
+        "yes_bid": 0.54,
+        "yes_ask": 0.55,
+        "fee_at_ask": 0.0225,
+        "volume_24h": 1598.528397,
+        "url": "https://polymarket.com/event/mlb-ari-stl-2026-06-25"
+      },
+      "book_consensus": 0.5521,
+      "book_count": 6,
+      "polymarket_edge_vs_books": -0.0071,
+      "signal": "STL priced 0.7 pts BELOW book consensus on polymarket -> value side: 'STL wins' (YES) on polymarket"
+    },
+    {
+      "game_key": "MLB:ARI|ATH:2026-07-22",
+      "league": "MLB",
+      "date": "2026-07-22",
+      "team": "ARI",
+      "opponent": "ATH",
+      "home_team": "ARI",
+      "orientation": "home",
+      "kalshi": {
+        "yes_bid": 0.52,
+        "yes_ask": 0.53,
+        "fee_at_ask": 0.02,
+        "volume_24h": 25987.62,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221540ATHAZ"
+      },
+      "polymarket": {
+        "yes_bid": 0.51,
+        "yes_ask": 0.52,
+        "fee_at_ask": 0.024,
+        "volume_24h": 1119.0068350000001,
+        "url": "https://polymarket.com/event/mlb-oak-ari-2026-07-22"
+      },
+      "book_consensus": 0.5183,
+      "book_count": 9,
+      "kalshi_edge_vs_books": 0.0067,
+      "polymarket_edge_vs_books": -0.0033,
+      "signal": "ARI priced 0.7 pts ABOVE book consensus on kalshi -> value side: 'ATH wins' (i.e. NO ARI) on kalshi"
+    },
+    {
+      "game_key": "MLB:LAD|PHI:2026-07-22",
+      "league": "MLB",
+      "date": "2026-07-22",
+      "team": "PHI",
+      "opponent": "LAD",
+      "home_team": "PHI",
+      "orientation": "home",
+      "kalshi": {
+        "yes_bid": 0.47,
+        "yes_ask": 0.48,
+        "fee_at_ask": 0.02,
+        "volume_24h": 45738.35,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221840LADPHI"
+      },
+      "polymarket": {
+        "yes_bid": 0.47,
+        "yes_ask": 0.48,
+        "fee_at_ask": 0.024,
+        "volume_24h": 2285.614581,
+        "url": "https://polymarket.com/event/mlb-lad-phi-2026-07-22"
+      },
+      "book_consensus": 0.4793,
+      "book_count": 9,
+      "kalshi_edge_vs_books": -0.0043,
+      "polymarket_edge_vs_books": -0.0043,
+      "signal": "PHI priced 0.4 pts BELOW book consensus on kalshi -> value side: 'PHI wins' (YES) on kalshi"
     },
     {
       "game_key": "MLB:CLE|MIN:2026-07-22",
@@ -395,7 +318,7 @@
         "yes_bid": 0.53,
         "yes_ask": 0.54,
         "fee_at_ask": 0.02,
-        "volume_24h": 10533.42,
+        "volume_24h": 19030.34,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221840MINCLE"
       },
       "polymarket": {
@@ -405,11 +328,67 @@
         "volume_24h": 2558.4123469999995,
         "url": "https://polymarket.com/event/mlb-min-cle-2026-07-22"
       },
-      "book_consensus": 0.5322,
+      "book_consensus": 0.5313,
       "book_count": 9,
-      "kalshi_edge_vs_books": 0.0028,
-      "polymarket_edge_vs_books": 0.0028,
-      "signal": "CLE priced 0.3 pts ABOVE book consensus on kalshi -> value side: 'MIN wins' (i.e. NO CLE) on kalshi"
+      "kalshi_edge_vs_books": 0.0037,
+      "polymarket_edge_vs_books": 0.0037,
+      "signal": "CLE priced 0.4 pts ABOVE book consensus on kalshi -> value side: 'MIN wins' (i.e. NO CLE) on kalshi"
+    },
+    {
+      "game_key": "MLB:CIN|SEA:2026-07-22",
+      "league": "MLB",
+      "date": "2026-07-22",
+      "team": "SEA",
+      "opponent": "CIN",
+      "home_team": "SEA",
+      "orientation": "home",
+      "kalshi": {
+        "yes_bid": 0.58,
+        "yes_ask": 0.59,
+        "fee_at_ask": 0.02,
+        "volume_24h": 24848.23,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221540CINSEA"
+      },
+      "polymarket": {
+        "yes_bid": 0.58,
+        "yes_ask": 0.59,
+        "fee_at_ask": 0.0205,
+        "volume_24h": 42109.00559,
+        "url": "https://polymarket.com/event/mlb-cin-sea-2026-07-22"
+      },
+      "book_consensus": 0.5818,
+      "book_count": 9,
+      "kalshi_edge_vs_books": 0.0032,
+      "polymarket_edge_vs_books": 0.0032,
+      "signal": "SEA priced 0.3 pts ABOVE book consensus on kalshi -> value side: 'CIN wins' (i.e. NO SEA) on kalshi"
+    },
+    {
+      "game_key": "MLB:COL|WSH:2026-07-22",
+      "league": "MLB",
+      "date": "2026-07-22",
+      "team": "COL",
+      "opponent": "WSH",
+      "home_team": "COL",
+      "orientation": "home",
+      "kalshi": {
+        "yes_bid": 0.44,
+        "yes_ask": 0.45,
+        "fee_at_ask": 0.02,
+        "volume_24h": 29079.89,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221510WSHCOL"
+      },
+      "polymarket": {
+        "yes_bid": 0.44,
+        "yes_ask": 0.45,
+        "fee_at_ask": 0.0225,
+        "volume_24h": 7711.424607,
+        "url": "https://polymarket.com/event/mlb-wsh-col-2026-07-22"
+      },
+      "book_consensus": 0.4481,
+      "book_count": 9,
+      "kalshi_edge_vs_books": -0.0031,
+      "polymarket_edge_vs_books": -0.0031,
+      "signal": "COL priced 0.3 pts BELOW book consensus on kalshi -> value side: 'COL wins' (YES) on kalshi"
     },
     {
       "game_key": "MLB:LAA|STL:2026-07-22",
@@ -423,14 +402,49 @@
         "yes_bid": 0.52,
         "yes_ask": 0.53,
         "fee_at_ask": 0.02,
-        "volume_24h": 9946.9,
+        "volume_24h": 20366.48,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL221607STLLAA"
       },
-      "polymarket": null,
-      "book_consensus": 0.5238,
+      "polymarket": {
+        "yes_bid": 0.52,
+        "yes_ask": 0.53,
+        "fee_at_ask": 0.0235,
+        "volume_24h": 403.539112,
+        "url": "https://polymarket.com/event/mlb-stl-laa-2026-07-22"
+      },
+      "book_consensus": 0.5231,
       "book_count": 9,
-      "kalshi_edge_vs_books": 0.0012,
-      "signal": "LAA priced 0.1 pts ABOVE book consensus on kalshi -> value side: 'STL wins' (i.e. NO LAA) on kalshi"
+      "kalshi_edge_vs_books": 0.0019,
+      "polymarket_edge_vs_books": 0.0019,
+      "signal": "LAA priced 0.2 pts ABOVE book consensus on kalshi -> value side: 'STL wins' (i.e. NO LAA) on kalshi"
+    },
+    {
+      "game_key": "MLB:HOU|MIA:2026-07-22",
+      "league": "MLB",
+      "date": "2026-07-22",
+      "team": "HOU",
+      "opponent": "MIA",
+      "home_team": "HOU",
+      "orientation": "home",
+      "kalshi": {
+        "yes_bid": 0.52,
+        "yes_ask": 0.53,
+        "fee_at_ask": 0.02,
+        "volume_24h": 14615.23,
+        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL222010MIAHOU"
+      },
+      "polymarket": {
+        "yes_bid": 0.52,
+        "yes_ask": 0.53,
+        "fee_at_ask": 0.0235,
+        "volume_24h": 524.8970059999999,
+        "url": "https://polymarket.com/event/mlb-mia-hou-2026-07-22"
+      },
+      "book_consensus": 0.5234,
+      "book_count": 9,
+      "kalshi_edge_vs_books": 0.0016,
+      "polymarket_edge_vs_books": 0.0016,
+      "signal": "HOU priced 0.2 pts ABOVE book consensus on kalshi -> value side: 'MIA wins' (i.e. NO HOU) on kalshi"
     },
     {
       "game_key": "MLB:DET|KC:2026-07-23",
@@ -444,7 +458,7 @@
         "yes_bid": 0.59,
         "yes_ask": 0.61,
         "fee_at_ask": 0.02,
-        "volume_24h": 147.29,
+        "volume_24h": 155.86,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL231840KCDET"
       },
       "polymarket": null,
@@ -460,10 +474,10 @@
       "home_team": "TOR",
       "orientation": "home",
       "kalshi": {
-        "yes_bid": 0.48,
-        "yes_ask": 0.52,
+        "yes_bid": 0.46,
+        "yes_ask": 0.47,
         "fee_at_ask": 0.02,
-        "volume_24h": 222.14,
+        "volume_24h": 1191.75,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL231507TBTOR"
       },
       "polymarket": null,
@@ -479,10 +493,10 @@
       "home_team": "CLE",
       "orientation": "home",
       "kalshi": {
-        "yes_bid": 0.55,
-        "yes_ask": 0.56,
+        "yes_bid": 0.56,
+        "yes_ask": 0.57,
         "fee_at_ask": 0.02,
-        "volume_24h": 82.89,
+        "volume_24h": 130.99,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL231310MINCLE"
       },
       "polymarket": null,
@@ -498,57 +512,19 @@
       "home_team": "ATL",
       "orientation": "home",
       "kalshi": {
-        "yes_bid": 0.63,
-        "yes_ask": 0.67,
+        "yes_bid": 0.64,
+        "yes_ask": 0.66,
         "fee_at_ask": 0.02,
-        "volume_24h": 1789.83,
+        "volume_24h": 2087.25,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL231215SDATL"
       },
       "polymarket": {
-        "yes_bid": 0.65,
-        "yes_ask": 0.67,
-        "fee_at_ask": 0.0165,
-        "volume_24h": 330.886374,
+        "yes_bid": 0.62,
+        "yes_ask": 0.65,
+        "fee_at_ask": 0.0175,
+        "volume_24h": 392.177957,
         "url": "https://polymarket.com/event/mlb-sd-atl-2026-07-23"
       },
-      "book_consensus": null,
-      "book_count": null
-    },
-    {
-      "game_key": "MLB:CIN|SEA:2026-07-21",
-      "league": "MLB",
-      "date": "2026-07-21",
-      "team": "SEA",
-      "opponent": "CIN",
-      "home_team": "SEA",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.12,
-        "yes_ask": 0.13,
-        "fee_at_ask": 0.01,
-        "volume_24h": 3011858.59,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL212140CINSEA"
-      },
-      "polymarket": null,
-      "book_consensus": null,
-      "book_count": null
-    },
-    {
-      "game_key": "MLB:ARI|ATH:2026-07-21",
-      "league": "MLB",
-      "date": "2026-07-21",
-      "team": "ARI",
-      "opponent": "ATH",
-      "home_team": "ARI",
-      "orientation": "home",
-      "kalshi": {
-        "yes_bid": 0.94,
-        "yes_ask": 0.95,
-        "fee_at_ask": 0.01,
-        "volume_24h": 1145573.9,
-        "url": "https://kalshi.com/markets/KXMLBGAME-26JUL212140ATHAZ"
-      },
-      "polymarket": null,
       "book_consensus": null,
       "book_count": null
     },
@@ -561,10 +537,10 @@
       "home_team": "BOS",
       "orientation": "home",
       "kalshi": {
-        "yes_bid": 0.54,
-        "yes_ask": 0.55,
+        "yes_bid": 0.57,
+        "yes_ask": 0.58,
         "fee_at_ask": 0.02,
-        "volume_24h": 698524.63,
+        "volume_24h": 708858.69,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL211910BALBOS"
       },
       "polymarket": null,
@@ -580,13 +556,127 @@
       "home_team": "NYY",
       "orientation": "home",
       "kalshi": {
-        "yes_bid": 0.59,
-        "yes_ask": 0.6,
+        "yes_bid": 0.6,
+        "yes_ask": 0.61,
         "fee_at_ask": 0.02,
-        "volume_24h": 291504.04,
+        "volume_24h": 279490.94,
         "url": "https://kalshi.com/markets/KXMLBGAME-26JUL211905PITNYY"
       },
       "polymarket": null,
+      "book_consensus": null,
+      "book_count": null
+    },
+    {
+      "game_key": "MLB:COL|MIL:2026-07-24",
+      "league": "MLB",
+      "date": "2026-07-24",
+      "team": "COL",
+      "opponent": "MIL",
+      "home_team": null,
+      "orientation": "ref",
+      "kalshi": null,
+      "polymarket": {
+        "yes_bid": 0.36,
+        "yes_ask": 0.39,
+        "fee_at_ask": 0.0195,
+        "volume_24h": 81.25,
+        "url": "https://polymarket.com/event/mlb-col-mil-2026-07-24"
+      },
+      "book_consensus": null,
+      "book_count": null
+    },
+    {
+      "game_key": "MLB:NYY|PHI:2026-07-24",
+      "league": "MLB",
+      "date": "2026-07-24",
+      "team": "NYY",
+      "opponent": "PHI",
+      "home_team": null,
+      "orientation": "ref",
+      "kalshi": null,
+      "polymarket": {
+        "yes_bid": 0.45,
+        "yes_ask": 0.47,
+        "fee_at_ask": 0.0235,
+        "volume_24h": 68.75,
+        "url": "https://polymarket.com/event/mlb-nyy-phi-2026-07-24"
+      },
+      "book_consensus": null,
+      "book_count": null
+    },
+    {
+      "game_key": "MLB:LAD|NYM:2026-07-24",
+      "league": "MLB",
+      "date": "2026-07-24",
+      "team": "LAD",
+      "opponent": "NYM",
+      "home_team": null,
+      "orientation": "ref",
+      "kalshi": null,
+      "polymarket": {
+        "yes_bid": 0.52,
+        "yes_ask": 0.55,
+        "fee_at_ask": 0.0225,
+        "volume_24h": 93.700796,
+        "url": "https://polymarket.com/event/mlb-lad-nym-2026-07-24"
+      },
+      "book_consensus": null,
+      "book_count": null
+    },
+    {
+      "game_key": "MLB:BOS|TOR:2026-07-24",
+      "league": "MLB",
+      "date": "2026-07-24",
+      "team": "BOS",
+      "opponent": "TOR",
+      "home_team": null,
+      "orientation": "ref",
+      "kalshi": null,
+      "polymarket": {
+        "yes_bid": 0.53,
+        "yes_ask": 0.56,
+        "fee_at_ask": 0.022,
+        "volume_24h": 168.40829599999998,
+        "url": "https://polymarket.com/event/mlb-tor-bos-2026-07-24"
+      },
+      "book_consensus": null,
+      "book_count": null
+    },
+    {
+      "game_key": "MLB:ATH|MIN:2026-07-24",
+      "league": "MLB",
+      "date": "2026-07-24",
+      "team": "ATH",
+      "opponent": "MIN",
+      "home_team": null,
+      "orientation": "ref",
+      "kalshi": null,
+      "polymarket": {
+        "yes_bid": 0.45,
+        "yes_ask": 0.47,
+        "fee_at_ask": 0.0235,
+        "volume_24h": 243.61111,
+        "url": "https://polymarket.com/event/mlb-oak-min-2026-07-24"
+      },
+      "book_consensus": null,
+      "book_count": null
+    },
+    {
+      "game_key": "MLB:CIN|STL:2026-07-24",
+      "league": "MLB",
+      "date": "2026-07-24",
+      "team": "CIN",
+      "opponent": "STL",
+      "home_team": null,
+      "orientation": "ref",
+      "kalshi": null,
+      "polymarket": {
+        "yes_bid": 0.45,
+        "yes_ask": 0.46,
+        "fee_at_ask": 0.023,
+        "volume_24h": 74.88,
+        "url": "https://polymarket.com/event/mlb-cin-stl-2026-07-24"
+      },
       "book_consensus": null,
       "book_count": null
     }
@@ -594,6 +684,6 @@
   "suspect": [],
   "arbs": [],
   "arbs_suspect": [],
-  "below_volume_floor": 21,
+  "below_volume_floor": 13,
   "disclaimer": "Screener output, not financial advice. Prices move; always verify live quotes, fees, liquidity, and resolution rules on both venues before trading."
 }
